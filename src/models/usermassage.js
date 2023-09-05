@@ -26,11 +26,15 @@ const userSchema=mongoose.Schema({
         type:String,
         require:true,
         minLength:5
+    },
+    date:{
+        type:Date,
+        default:Date.now
     }
 })
 
 
 //we need to connection
-const User =mongoose.model("User",userSchema);
+const User =mongoose.model("User", userSchema);
 
-module.exports=User;
+module.exports=User; 
